@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+   
     public function registerUser(Request $request){
         try{
             $status = 200;
@@ -107,7 +108,7 @@ class UserController extends Controller
 
         }catch(\Exception $e){
             return response()->json([
-                'message' => 'error on ' . $e,
+                'message' => 'error on register user ' . $e,
                 'status' => 403,
                 'response' => false
             ]);
@@ -131,7 +132,7 @@ class UserController extends Controller
         }
         catch(\Exception $e){
             return response()->json([
-                'message' => 'error on ' . $e,
+                'message' => 'error on delete user ' . $e,
                 'status' => 403,
                 'response' => false
             ]);
@@ -203,7 +204,7 @@ class UserController extends Controller
         }
         catch(\Exception $e){
             return response()->json([
-                'message' => 'error on ' . $e,
+                'message' => 'error on get users ' . $e,
                 'status' => 403,
                 'response' => false
             ]);
