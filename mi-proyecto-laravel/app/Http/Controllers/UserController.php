@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    
     public function registerUser(Request $request){
         try{
             $status = 200;
@@ -97,7 +96,6 @@ class UserController extends Controller
             $updateUser->Address =  $address;
             $updateUser->Password =Hash::make($password);
             $updateUser->Email =  $email;
-            //$updateUser->updated_id = $updated_id;
             $updateUser->update();
 
             return response()->json([
@@ -155,7 +153,7 @@ class UserController extends Controller
     {
       
         $user = Users::where('Email', $credentials['email'])->first();
-    
+        
         
         if (!$user || !Hash::check($credentials['password'], $user->Password)) {
             return false;

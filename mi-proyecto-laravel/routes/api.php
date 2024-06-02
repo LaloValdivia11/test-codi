@@ -14,19 +14,14 @@ use App\Http\Controllers\UserController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::get('/test-public', function () {
-    return response()->json(['message' => 'Public route accessible']);
-});
 
 
 Route::post('/login', [UserController::class, 'login'])->name('login');
-
-
 Route::post('/register', [UserController::class, 'registerUser']);
 Route::put('/user/{id}', [UserController::class, 'editUser']);
-Route::delete('/user/{id}', [UserController::class, 'deleteUser']);   
+Route::delete('/user/{id}', [UserController::class, 'deleteUser']);
 Route::get('/all/user', [UserController::class, 'allUser']);
 
-Route::middleware('auth:sanctum')->group(function () {
-
+Route::middleware('auth')->group(function () {
+   
 });
