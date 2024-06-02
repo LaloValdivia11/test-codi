@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-   
     public function registerUser(Request $request){
         try{
             $status = 200;
@@ -173,7 +172,6 @@ class UserController extends Controller
         
         $jwt_secret = env('JWT_SECRET'); 
 
-      //  dd ($jwt_secret);
         return JWT::encode($payload, "dddddjdj", 'HS256');
     }
 
