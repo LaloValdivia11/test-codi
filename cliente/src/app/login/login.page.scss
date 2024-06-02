@@ -1,0 +1,30 @@
+/* Para la página de inicio de sesión */
+ion-header {
+    background-color: #3F51B5; /* Cambia el color de fondo del encabezado */
+  }
+  
+  ion-title {
+    color: #FFFFFF; /* Cambia el color del texto del título */
+  }
+  
+  ion-content {
+    background-color: #EDEDED; /* Cambia el color de fondo del contenido */
+  }
+  
+  form {
+    max-width: 300px; /* Limita el ancho del formulario para que no se vea demasiado ancho en dispositivos pequeños */
+    margin: auto; /* Centra el formulario horizontalmente */
+  }
+  
+  ion-item {
+    margin-bottom: 20px; /* Añade un espacio entre los elementos de entrada */
+  }
+  
+  p {
+    color: #888888; /* Cambia el color del texto del párrafo */
+  }
+  
+  a {
+    color: #3F51B5; /* Cambia el color del enlace */
+  }
+  

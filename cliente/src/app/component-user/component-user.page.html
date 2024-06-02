@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Usuarios Registrados</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="regresarALogin()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="agregarUsuario()">
+        <ion-icon slot="icon-only" name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+
+    <ion-item *ngFor="let usuario of usuarios">
+      <ion-label>{{ usuario.Name }}</ion-label>
+      <ion-label>{{ usuario.Email }}</ion-label>
+      
+      <ion-button (click)="mostrarModalEditar(usuario.id)">Editar</ion-button>
+      <ion-button (click)="eliminarUsuario(usuario.id)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

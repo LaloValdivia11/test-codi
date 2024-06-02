@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro Registrados</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="onSubmit()" class="registration-form">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombre:</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.name" name="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido Paterno:</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.paternalSurname" name="paternalSurname" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido Materno:</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.maternalSurname" name="maternalSurname" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Teléfono:</ion-label>
+        <ion-input type="tel" [(ngModel)]="userData.phoneNumber" name="phoneNumber" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Dirección:</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.address" name="address" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña:</ion-label>
+        <ion-input type="password" [(ngModel)]="userData.password" name="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirmar Contraseña:</ion-label>
+        <ion-input type="password" [(ngModel)]="userData.password_confirmation" name="password_confirmation" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico:</ion-label>
+        <ion-input type="email" [(ngModel)]="userData.email" name="email" required></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-row class="ion-justify-content-center">
+      <ion-button expand="block" type="submit">Registrarse</ion-button>
+    </ion-row>
+  </form>
+</ion-content>

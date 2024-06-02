@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Editar Usuario</ion-title>
+      <ion-buttons slot="start">
+        <ion-button (click)="regresarALogin()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input type="text" name="name" [(ngModel)]="userData.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Apellido Paterno</ion-label>
+    <ion-input type="text" name="paternalSurname" [(ngModel)]="userData.paternalSurname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Apellido Materno</ion-label>
+    <ion-input type="text" name="maternalSurname" [(ngModel)]="userData.maternalSurname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Teléfono</ion-label>
+    <ion-input type="text" name="phoneNumber" [(ngModel)]="userData.phoneNumber"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Dirección</ion-label>
+    <ion-input type="text" name="address" [(ngModel)]="userData.address"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Contraseña</ion-label>
+    <ion-input type="password" name="password" [(ngModel)]="userData.password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Confirmar Contraseña</ion-label>
+    <ion-input type="password" name="password_confirmation" [(ngModel)]="userData.password_confirmation"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Correo Electrónico</ion-label>
+    <ion-input type="email" name="email" [(ngModel)]="userData.email"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="guardarCambios()">Guardar Cambios</ion-button>
+</ion-content>
+
+
